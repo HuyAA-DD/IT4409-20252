@@ -1,0 +1,40 @@
+[
+  {
+    "studentId": "SV001",
+    "subjects": [
+      {
+        "id": 1,
+        "subjectName": "Toán rời rạc",
+        "qt": 8.5,
+        "ck": 7.0,
+        "semester": "HK1"
+      },
+      {
+        "id": 2,
+        "subjectName": "Lập trình C",
+        "qt": 9.0,
+        "ck": 8.0,
+        "semester": "HK1"
+      }
+    ]
+  },
+  {
+    "studentId": "SV002",
+    "subjects": [
+      {
+        "id": 1,
+        "subjectName": "Cấu trúc dữ liệu",
+        "qt": 7.5,
+        "ck": 8.5,
+        "semester": "HK2"
+      },
+      {
+        "id": 2,
+        "subjectName": "JavaScript",
+        "qt": 8.0,
+        "ck": 9.0,
+        "semester": "HK2"
+      }
+    ]
+  }
+]

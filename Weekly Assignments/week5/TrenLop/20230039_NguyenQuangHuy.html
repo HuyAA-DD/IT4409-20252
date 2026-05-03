@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inputText" placeholder="Nhập gì đó...">
+    <button onclick="addItem()">Add</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        // bt2 
+        const students = [
+            {
+                name: "A",
+                score: 10
+            },
+            {
+                name: "B",
+                score: 9
+            }
+        ]
+
+        const avg = students.reduce((sum, s) => sum + s.score, 0) / students.length;
+        console.log(avg)
+
+        // bt4
+
+        function addItem() {
+            // Lấy giá trị input
+            const input = document.getElementById("inputText");
+            const value = input.value;
+            if (value.trim() === "") return;
+
+            // Tạo thẻ li mới
+            const li = document.createElement("li");
+            li.textContent = value;
+
+            // Thêm vào ul
+            const ul = document.getElementById("list");
+            ul.appendChild(li);
+
+            // Xóa input sau khi thêm
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>

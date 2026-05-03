@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    function fetchData() {
+        return new Promise(resolve =>
+            setTimeout(() => resolve("📦 Data received"), 1000)
+        );
+    }
+
+    // Có await
+    async function load1() {
+        console.log("load1: Before await");
+        const data = await fetchData();
+        console.log("load1: After await:", data);
+    }
+
+    // Không await
+    async function load2() {
+        console.log("load2: Before no-await");
+        const data = fetchData();
+        console.log("load2: After no-await:", data);
+    }
+
+    function test1() {
+        load1();
+        console.log("test1: chạy trước (vì await async)");
+    }
+
+    function test2() {
+        load2();
+        console.log("test2: chạy trước (không await)");
+    }
+    test1();
+    test2();
+</script>
+
+
+</html>
